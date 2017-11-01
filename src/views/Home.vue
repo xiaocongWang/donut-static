@@ -10,12 +10,22 @@
 </template>
 
 <script>
+import { getList } from '../api';
+
 export default {
   name: 'HelloWorld',
   data() {
     return {
       msg: 'Welcome to Donut!',
     };
+  },
+  methods: {
+    getList() {
+      getList();
+    },
+  },
+  mounted() {
+    this.getList();
   },
 };
 </script>
