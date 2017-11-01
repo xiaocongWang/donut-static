@@ -21,6 +21,7 @@ npm run build
 
 ## 帮助
 如果 npm install 比较慢，建议使用淘宝的镜像安装。
+
 配置：`npm config set registry=https://registry.npm.taobao.org`
 
 ```bash
