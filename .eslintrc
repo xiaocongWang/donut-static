@@ -11,6 +11,13 @@
   "plugins": [
     "html"
   ],
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "build/webpack.base.conf.js"
+      }
+    }
+  },
   "rules": {
     "global-require": 0,
     "import/first": 0,
@@ -20,6 +27,11 @@
     "no-restricted-globals": 0,
     "no-underscore-dangle": 0,
     "no-bitwise": 0,
-    "prefer-promise-reject-errors": 0
+    "prefer-promise-reject-errors": 0,
+
+    "import/extensions": ["error", "always", {
+      "js": "never",
+      "vue": "never"
+    }]
   }
 }
