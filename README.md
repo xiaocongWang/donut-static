@@ -1,6 +1,6 @@
 # Donut
 
-Donut -- 使用  vue + vue-router 构建的web应用。
+Donut -- 使用  vue + vue-router 搭建的web应用。
 
 ## Build setup
 
