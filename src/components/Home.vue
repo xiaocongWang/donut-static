@@ -1,6 +1,11 @@
 <template>
   <div class="hello">
-    {{msg}}
+    <section>
+      <div class="img-wrap">
+        <img src="static/img/icon.jpg" alt="">
+      </div>
+      <p>{{msg}}</p>      
+    </section>
   </div>
 </template>
 
@@ -16,5 +21,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
+  .img-wrap
+    img
+      width 500px
 </style>

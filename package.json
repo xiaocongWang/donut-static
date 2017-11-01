@@ -35,6 +35,8 @@
     "css-loader": "^0.28.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.3",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
     "eslint": "^3.19.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
