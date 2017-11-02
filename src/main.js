@@ -11,3 +11,8 @@ new Vue({
   template: '<App/>',
   components: { App },
 });
+
+// service worker
+if (navigator.serviceWorker && process.env.NODE_ENV === 'production') {
+  navigator.serviceWorker.register('/service-worker.js');
+}

@@ -8,7 +8,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-
+const SWPrecachePlugin = require('sw-precache-webpack-plugin')
 const env = config.build.env
 
 const webpackConfig = merge(baseWebpackConfig, {
@@ -81,7 +81,25 @@ const webpackConfig = merge(baseWebpackConfig, {
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }
-    ])
+    ]),
+     // auto generate service worker
+     new SWPrecachePlugin({
+      cacheId: 'vue-hn',
+      filename: 'service-worker.js',
+      minify: true,
+      dontCacheBustUrlsMatching: /./,
+      staticFileGlobsIgnorePatterns: [/\.map$/, /\.json$/],
+      runtimeCaching: [
+        {
+          urlPattern: '/',
+          handler: 'networkFirst'
+        },
+        {
+          urlPattern: /\/api/,
+          handler: 'networkFirst'
+        }
+      ]
+    })
   ]
 })
 

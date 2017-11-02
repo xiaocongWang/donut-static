@@ -29,7 +29,7 @@ export default {
     };
   },
   methods: {
-    getList() {
+    getNewList() {
       getList().then((res) => {
         const { data } = res;
         this.newList = data;
@@ -37,7 +37,7 @@ export default {
     },
   },
   mounted() {
-    this.getList();
+    this.getNewList();
   },
 };
 </script>
