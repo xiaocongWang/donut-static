@@ -82,13 +82,13 @@ const webpackConfig = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ]),
-     // auto generate service worker
-     new SWPrecachePlugin({
-      cacheId: 'vue-hn',
+    // auto generate service worker
+    new SWPrecachePlugin({
+      cacheId: 'vue-donut',
       filename: 'service-worker.js',
       minify: true,
       dontCacheBustUrlsMatching: /./,
-      staticFileGlobsIgnorePatterns: [/\.map$/, /\.json$/],
+      staticFileGlobsIgnorePatterns: [/\.map$/, /\.json$/, /index\.html/], // 忽略 .map .json index.html 
       runtimeCaching: [
         {
           urlPattern: '/',

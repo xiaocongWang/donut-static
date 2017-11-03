@@ -13,5 +13,9 @@ export default new Router({
       name: 'Hello',
       component: Home,
     },
+    {
+      path: '*',
+      redirect: '/',
+    },
   ],
 });
